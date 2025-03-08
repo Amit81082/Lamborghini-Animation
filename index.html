@@ -21,13 +21,9 @@
             height: 120px;
             background: url('track.jpg') repeat-x;
             background-size: cover;
-            animation: moveRoad 3s linear infinite;
         }
 
-        @keyframes moveRoad {
-            from { background-position: -400% 0; }
-            to { background-position: 0 0; }
-        }
+       
 
         .car {
             position: absolute;
@@ -165,6 +161,8 @@
     }
 }
 
+
+
     </style>
 </head>
 
@@ -188,7 +186,21 @@
         <img src="car_wheel_left.png" class="wheel wheel1">
     </div>
 
-   
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let road = document.querySelector(".road");
+            let position = 0;
+    
+            function moveRoad() {
+                position -= 20; // Road speed
+                road.style.backgroundPosition = position + "px 0";
+                requestAnimationFrame(moveRoad);
+            }
+    
+            moveRoad();
+        });
+    </script>
+    
 </body>
 
 </html>
