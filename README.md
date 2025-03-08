@@ -8,7 +8,8 @@ Experience the **thrill of speed** with this **realistic Lamborghini animation**
 ✅ **Dynamic road & trees animation** 🌳🏁  
 
 ![Project Preview]
-![image](https://github.com/user-attachments/assets/0ed955bc-1a95-4c45-8fab-d5bb4ca7ab99)
+![image](https://github.com/user-attachments/assets/1f28efb3-3a73-42a1-a929-71e9a5386fb7)
+
 
 
 ---
