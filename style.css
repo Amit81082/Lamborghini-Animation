@@ -1,0 +1,149 @@
+/* 🌟 Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    background: url('bodybackground.png') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+    min-height: 100vh;
+    transform: translateZ(0);
+    will-change: transform;
+    
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('bodybackground.png') no-repeat center center / cover;
+    z-index: -1;
+}
+
+
+/* 🛣️ Road */
+.road {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+    background: url('track.jpg') repeat-x;
+    background-size: cover;
+}
+
+/* 🚗 Car */
+.car {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.7));
+    animation: carBounce 0.3s ease-in-out infinite alternate;
+}
+
+@keyframes carBounce {
+    0% { transform: translate(-50%, 0); }
+    100% { transform: translate(-50%, 3px); }
+}
+
+/* 🔄 Wheels */
+.wheel {
+    position: absolute;
+    width: 20%;
+    height: auto;
+    border-radius: 50%;
+    background: black;
+    animation: rotateWheels 0.3s linear infinite;
+}
+
+.wheel1 {
+    top: 30px;
+    left: 28px;
+}
+
+.wheel2 {
+    top: 30px;
+    left: 155px;
+}
+
+@keyframes rotateWheels {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* 💨 Smoke Effect */
+.smoke {
+    position: absolute;
+    bottom: 10px;
+    left: -20px;
+    width: 15px;
+    height: 15px;
+    background: rgba(200, 200, 200, 0.5);
+    border-radius: 50%;
+    animation: smokeEffect 1s ease-out infinite;
+}
+
+@keyframes smokeEffect {
+    0% { transform: scale(0.5) translateY(0); opacity: 1; }
+    100% { transform: scale(2) translateY(-50px); opacity: 0; }
+}
+
+/* 🔆 Headlights */
+.headlights {
+    position: absolute;
+    top: 20px;
+    right: -30px;
+    width: 100px;
+    height: 40px;
+    background: rgba(255, 255, 100, 0.5);
+    filter: blur(15px);
+    transform: skewX(-20deg);
+}
+
+/* 🌳 Trees Animation */
+.tree {
+    position: absolute;
+    bottom: 50px;
+    left: 100%;
+    width: 600px;
+    height: 300px;
+    background: url('tree.png') no-repeat center/cover;
+    animation: moveTrees 4s linear infinite;
+}
+
+@keyframes moveTrees {
+    from { left: 100%; }
+    to { left: -10%; }
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .car { width: 180px; bottom: 80px; }
+    .wheel1 { left: 25px; width: 40px; }
+    .wheel2 { left: 110px; width: 40px; }
+    .road { height: 100px; }
+    .tree { width: 300px; height: 200px; animation-duration: 3s; }
+}
+
+@media (max-width: 480px) {
+    .car { width: 140px; bottom: 60px; }
+    .wheel1 { left: 34px; width: 30px; }
+    .wheel2 { left: 162px; width: 30px; }
+    .road { height: 80px; }
+    .tree { width: 200px; height: 150px; animation-duration: 2.5s; }
+    .wheel { width: 28%; }
+}

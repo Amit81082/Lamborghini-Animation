@@ -5,202 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lamborghini Animation</title>
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-            background: url('bodybackground.png') no-repeat center center fixed;
-            background-size: cover;
-            height: 100vh;
-        }
-
-        .road {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            height: 120px;
-            background: url('track.jpg') repeat-x;
-            background-size: cover;
-        }
-
-       
-
-        .car {
-            position: absolute;
-            bottom: 100px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 250px;
-            animation: carBounce 0.3s ease-in-out infinite alternate;
-        }
-        .car {
-    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.7));
-}
-
-        @keyframes carBounce {
-            0% { transform: translate(-50%, 0); }
-            100% { transform: translate(-50%, 3px); }
-        }
-
-        .wheel {
-            position: absolute;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: black;
-            animation: rotateWheels 0.3s linear infinite;
-        }
-
-        .wheel2 {
-            top: 31px;
-    left: 155px;
-    width: 50px;
-        }
-
-        .wheel1 {
-            top: 29px;
-    left: 28px;
-    width: 50px;
-        }
-
-        @keyframes rotateWheels {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        .smoke {
-            position: absolute;
-            bottom: 10px;
-            left: -20px;
-            width: 15px;
-            height: 15px;
-            background: rgba(200, 200, 200, 0.5);
-            border-radius: 50%;
-            animation: smokeEffect 1s ease-out infinite;
-        }
-
-        @keyframes smokeEffect {
-            0% { transform: scale(0.5) translateY(0); opacity: 1; }
-            100% { transform: scale(2) translateY(-50px); opacity: 0; }
-        }
-
-        .headlights {
-            position: absolute;
-            top: 20px;
-            right: -30px;
-            width: 100px;
-            height: 40px;
-            background: rgba(255, 255, 100, 0.5);
-            filter: blur(15px);
-            transform: skewX(-20deg);
-        }
-
-        .tree {
-            position: absolute;
-            bottom: 50px;
-            left: 100%;
-            width: 50px;
-            height: 100px;
-            background: url('tree.png') no-repeat center/cover;
-            animation: moveTrees 4s linear infinite;
-        }
-
-        @keyframes moveTrees {
-            from { left: 100%; }
-            to { left: -10%; }
-        }
-
-        .clouds {
-            position: absolute;
-            top: 10px;
-            width: 100%;
-            height: 100px;
-            background: url('clouds.png') repeat-x;
-            background-size: contain;
-            animation: moveClouds 30s linear infinite;
-        }
-
-        @keyframes moveClouds {
-            from { background-position: 100% 0; }
-            to { background-position: 0 0; }
-        }
-
-        
-
-        @media (max-width: 768px) {
-            .car {
-                width: 180px;
-                bottom: 80px;
-            }
-            .wheel1 { left: 25px; width: 40px; }
-            .wheel2 { left: 110px; width: 40px; }
-            .road { height: 100px; }
-            .tree { width: 40px; height: 80px; animation-duration: 3s; }
-        }
-
-        @media (max-width: 480px) {
-            .car {
-                width: 140px;
-                bottom: 60px;
-            }
-            .wheel1 { left: 18px; width: 30px; }
-            .wheel2 { left: 85px; width: 30px; }
-            .road { height: 80px; }
-            .tree { width: 30px; height: 60px; animation-duration: 2.5s; }
-        }
-        /* 🔥 Fixing Wheel Size Dynamically */
-.wheel {
-    width: 20%;
-    height: auto;
-}
-
-/* 📱 Mobile Screens Fix */
-@media (max-width: 480px) {
-    .wheel {
-        width: 22%;  /* Mobile pe halka bada */
-    }
-}
-
-
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     
-    <div class="clouds"></div>
     <div class="tree"></div>
     <div class="tree"></div>
     <div class="tree"></div>
     <div class="road"></div>
     <div class="car">
-       
-          
-        
-
-
         <div class="smoke"></div>
         <div class="headlights"></div>
         <img src="car_body.png" width="250px">
         <img src="car_wheel_right.png" class="wheel wheel2">
         <img src="car_wheel_left.png" class="wheel wheel1">
     </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            let road = document.querySelector(".road");
-            let position = 0;
-    
-            function moveRoad() {
-                position -= 20; // Road speed
-                road.style.backgroundPosition = position + "px 0";
-                requestAnimationFrame(moveRoad);
-            }
-    
-            moveRoad();
-        });
-    </script>
-    
+    <script src="script.js"></script>
 </body>
 
 </html>
+    
+  
+
+
+
+
+       
