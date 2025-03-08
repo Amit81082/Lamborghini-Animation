@@ -25,3 +25,22 @@ function startEngineSound() {
 // 3️⃣ User Interaction Event (Click ya Key Press)
 document.addEventListener("click", startEngineSound);
 document.addEventListener("keydown", startEngineSound);
+
+function shakeBackground() {
+    let intensity = 1.2; // Shake intensity (jitna jyada, utna zyada shake)
+    
+    function move() {
+        let x = (Math.random() * intensity * 2 - intensity).toFixed(2);
+        let y = (Math.random() * intensity * 2 - intensity).toFixed(2);
+        
+        document.body.style.transform = `translate(${x}px, ${y}px)`;
+        
+        requestAnimationFrame(move); // Smooth animation ke liye
+    }
+
+    move();
+}
+
+shakeBackground();
+
+

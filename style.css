@@ -14,7 +14,16 @@ body {
     min-height: 100vh;
     transform: translateZ(0);
     will-change: transform;
+    /* animation: shake 0.1s infinite alternate ease-in-out; Shake Effect */
+    position: relative;
     
+}
+
+
+
+@keyframes shake {
+    0% { background-position: 0px 0px; }
+    100% { background-position: 2px 2px; } /* Halka sa movement */
 }
 
 html, body {
