@@ -7,7 +7,9 @@ Experience the **thrill of speed** with this **realistic Lamborghini animation**
 ✅ **Vibrating background for real feel** 🌍✨  
 ✅ **Dynamic road & trees animation** 🌳🏁  
 
-![Project Preview](preview-image.png)
+![Project Preview]
+![image](https://github.com/user-attachments/assets/0ed955bc-1a95-4c45-8fab-d5bb4ca7ab99)
+
 
 ---
 
@@ -15,7 +17,6 @@ Experience the **thrill of speed** with this **realistic Lamborghini animation**
 🔗 **[Click Here to View the Project](https://amit81082.github.io/Lamborghini-Animation/)** 
 
 
-Screenshots - 
 
 📢 **Best viewed on Chrome, Edge & Firefox**  
 
