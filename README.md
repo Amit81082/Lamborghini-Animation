@@ -39,19 +39,38 @@ Experience the **thrill of speed** with this **realistic Lamborghini animation**
 ```bash
 git clone https://github.com/your-username/Lamborghini-Animation.git
 
-2️⃣ Open index.html in your browser 🌐
-
+2️⃣ **Open `index.html` in your browser** 🌐  
+```bash
 cd Lamborghini-Animation
 open index.html
+```
 
-3️⃣ Enjoy the ride! 🚗💨
+3️⃣ **Enjoy the ride! 🚗💨**  
 
-⭐ Give Your Feedback!
+---
 
-🔥 Loved this project? Give it a Star! 🌟🐞 Found a bug? Create an Issue
+## 📂 **Project Structure**  
+```
+Lamborghini-Animation/
+│── index.html       # Main HTML File  
+│── style.css        # Styling & Animations  
+│── script.js        # JavaScript for Interactions  
+│── assets/          # Images & Sounds  
+│── README.md        # Project Documentation  
+```
 
-📢 Follow me for more awesome projects! 🚀
+---
 
-💡 Made with ❤️ for car & animation lovers! 🏎️💨
+## ⭐ **Give Your Feedback!**  
+🔥 **Loved this project? Give it a Star!** 🌟  
+🐞 **Found a bug?** [Create an Issue](https://github.com/Amit81082/Lamborghini-Animation/issues)  
+
+📢 **Follow me for more awesome projects!** 🚀  
+
+---
+
+💡 **Made with ❤️ for car & animation lovers!** 🏎️💨
+
+
 
 
